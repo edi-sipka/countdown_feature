@@ -1,0 +1,20 @@
+<div id="<%= dom_id countdown %>">
+  <p>
+    <strong>Name:</strong>
+    <%= countdown.name %>
+  </p>
+
+  <p>
+    <strong>Description:</strong>
+    <%= countdown.description %>
+  </p>
+
+  <p>
+    <strong>Target:</strong>
+    <%= countdown.target %>
+  </p>
+
+<%= content_tag(:h1, "", data: {
+controller: "countdown", }) %>
+
+</div>
