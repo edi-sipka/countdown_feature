@@ -1,1 +1,1 @@
-json.partial! "countdowns/countdown", countdown: @countdown
+json.partial! 'countdowns/countdown', countdown: @countdown

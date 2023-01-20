@@ -1,24 +1,19 @@
-<div id="<%= dom_id countdown %>">
-  <p>
-    <strong>Name:</strong>
-    <%= countdown.name %>
-  </p>
-
-  <p>
-    <strong>Description:</strong>
-    <%= countdown.description %>
-  </p>
-
-  <p>
-    <strong>Target:</strong>
-    <%= countdown.target %>
-  </p>
-
-  <% seconds_until_target_time = countdown.target.to_i - Time.now.to_i %>
-
-<%= content_tag(:h1, "", data: {
-controller: "countdown",
-countdown_target: "countdown",
-seconds_until_end_value: seconds_until_target_time }) %>
-
-</div>
+<div style="background-image: url('https://wallpaperaccess.com/full/295661.jpg');" class="flex items-center justify-center bg-gradient-to-t h-screen p-6 bg-no-repeat bg-center">
+  <div class="w-full md:w-1/4 lg:w-1/2">
+    <div class="flex justify-between py-6 px-4 bg-white/30 rounded-lg">
+      <div class="flex items-center space-x-4">
+        <img src="https://flowbite.com/docs/images/people/profile-picture-1.jpg" class="rounded-full h-14 w-14" alt="">
+          <div class="flex flex-col space-y-1">
+           <span class="font-bold"> <%= countdown.name %></span>
+             <span class="text-sm"><%= countdown.description %> 🔥</span>
+              <span class="font-bold"> Remaning time:</span>
+                <span class="text-sm">            
+                  <% seconds_until_target_time = countdown.target.to_i - Time.now.to_i %>
+                   <%= content_tag(:h1, "", data: {
+                    controller: "countdown",
+                      countdown_target: "countdown",
+                        seconds_until_end_value: seconds_until_target_time }) %></span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
