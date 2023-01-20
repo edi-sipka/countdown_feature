@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @countdown %>
+
+<div>
+  <%= link_to "Edit this countdown", edit_countdown_path(@countdown) %> |
+  <%= link_to "Back to countdowns", countdowns_path %>
+
+  <%= button_to "Destroy this countdown", @countdown, method: :delete %>
+</div>
