@@ -14,7 +14,11 @@
     <%= countdown.target %>
   </p>
 
+  <% seconds_until_target_time = countdown.target.to_i - Time.now.to_i %>
+
 <%= content_tag(:h1, "", data: {
-controller: "countdown", }) %>
+controller: "countdown",
+countdown_target: "countdown",
+seconds_until_end_value: seconds_until_target_time }) %>
 
 </div>
